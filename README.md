@@ -18,6 +18,9 @@ That means:
 ## how will it work?
 The web app controls the t-rex with the racket server acting as an intermediary. Unity WebGL doesn't have direct socket access but we can call JavaScript from C# - which, as mentioned, works. 
 
+## web rex on pi
+![rex](./rex-on-pi.png)
+
 ## dependencies 
 - elm 
 - racket
