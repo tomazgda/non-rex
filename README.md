@@ -9,8 +9,9 @@ That means:
 - communication between the two using web sockets.
 
 ## dependencies 
-
-- requires the racket library rfc6455.
+- elm 
+- racket
+- the racket library rfc6455.
 ``` bash
 raco pkg install rfc6455
 ```
