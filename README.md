@@ -10,12 +10,13 @@ That means:
 - communication between the elm app and the racket server with web sockets.
 - communication between the racket server and unity with web sockets
 
-## what's done so far
+## what's done so far?
 - the racket web server can talk to a running unity game on the web! :)
 - the elm app can talk to the racket server
+- the T-rex unity project can run on the web, on the pi.
 
-## todo
-- the full loop whereby the app controls the t-rex with the racket server acting as an intermediary.
+## how will it work?
+The web app controls the t-rex with the racket server acting as an intermediary. Unity WebGL doesn't have direct socket access but we can call JavaScript from C# - which, as mentioned, works. 
 
 ## dependencies 
 - elm 
