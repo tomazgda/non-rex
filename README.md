@@ -1,5 +1,5 @@
 # non-trex
-**pronounced non-treks**
+*pronounced non-treks*
 
 The loop not including the t-rex. 
 
