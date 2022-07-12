@@ -1,12 +1,14 @@
 # web-trex
 *pronounced web-treks*
 
-The loop not including the t-rex. 
+The whole loop.
 
 That means: 
 - an elm web-app with some controls.
 - a racket web server.
-- communication between the two using web sockets.
+- a unity project with the trex
+- communication between the elm app and the racket server with web sockets.
+- communication between the racket server and unity with web sockets
 
 ## dependencies 
 - elm 
