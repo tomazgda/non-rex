@@ -5,7 +5,7 @@ The whole loop.
 
 That means: 
 - an elm web-app with some controls.
-- a racket web server.
+- ![a racket web server.](./racke-server)
 - a unity project with the trex
 - communication between the elm app and the racket server with web sockets.
 - communication between the racket server and unity with web sockets
