@@ -1,10 +1,7 @@
 #lang racket
-(require net/rfc6455)
-
-;; (define port 8081)
-;; (ws-serve #:port port (lambda (c s) (ws-send! c "Hello world!")))
 
 (module+ main
+  (require net/rfc6455)
   (define port 8081)
   (define idle-timeout #f)
   (command-line #:once-each
@@ -16,13 +13,17 @@
   (define (connection-handler c state)
     (define id (gensym 'conn))
     (printf "~a: Connection received\n" id)
+    
     (let loop ()
+      (ws-send! c "hello")
+      
       (match (ws-recv c #:payload-type 'text)
         [(? eof-object?) (void)]
         [m
          (printf "~a: Received: ~v\n" id m)
          (ws-send! c m)
          (loop)]))
+    
     (printf "~a: Close status: ~v ~v\n"
             id
             (ws-conn-close-status c)
