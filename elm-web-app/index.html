@@ -6,6 +6,8 @@
   <title>Elm + Websockets</title>
   <!-- loads our compiled elm.js file -->
   <script type="text/javascript" src="elm.js"></script>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -23,19 +25,27 @@
 
   // create a web-socket pointing to racket web server
   var socket = new WebSocket('ws://localhost:8081/')
-  
-  socket.onopen = function(e) {
-      alert("[open] Connection established")
-      socket.send("Hello Racket!")
-  }
 
-  socket.onmessage = function(event) {
-      alert(`[message] Data received from server: ${event.data}`);
-  };
+  app.ports.sendMessage.subscribe(function(message) {
+      socket.send(message);
+  });
+  
+  // socket.onopen = function(e) {
+  //     alert("[open] Connection established")
+  //     // socket.send("Hello Racket!")
+  // }
+
+  // app.ports.sendMessage.subscribe(function(message) {
+  //     socket.send(message)''
+  // });
+
+  // socket.onmessage = function(event) {
+  //     alert(`[message] Data received from server: ${event.data}`);
+  // };
  
-  socket.onerror = function(error) {
-      alert("[error] Connection could not be established")
-  }  
+  // socket.onerror = function(error) {
+  //     alert("[error] Connection could not be established")
+  // }  
 
 </script>
 
