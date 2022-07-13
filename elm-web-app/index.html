@@ -26,6 +26,8 @@
   // create a web-socket pointing to racket web server
   var socket = new WebSocket('ws://localhost:8081/')
 
+  // var socket = new WebSocket('ws://trex-controller.azurewebsites.net:8081/')
+  
   app.ports.sendMessage.subscribe(function(message) {
       socket.send(message);
   });
