@@ -5184,13 +5184,25 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{draft: ''}),
-					$author$project$Main$sendMessage('moved left'));
+					$author$project$Main$sendMessage('left'));
 			case 'MoveRight':
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
 						{draft: ''}),
-					$author$project$Main$sendMessage('moved right'));
+					$author$project$Main$sendMessage('right'));
+			case 'MoveUp':
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{draft: ''}),
+					$author$project$Main$sendMessage('up'));
+			case 'MoveDown':
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{draft: ''}),
+					$author$project$Main$sendMessage('down'));
 			default:
 				var message = msg.a;
 				return _Utils_Tuple2(
@@ -5205,8 +5217,10 @@ var $author$project$Main$update = F2(
 					$elm$core$Platform$Cmd$none);
 		}
 	});
+var $author$project$Main$MoveDown = {$: 'MoveDown'};
 var $author$project$Main$MoveLeft = {$: 'MoveLeft'};
 var $author$project$Main$MoveRight = {$: 'MoveRight'};
+var $author$project$Main$MoveUp = {$: 'MoveUp'};
 var $elm$html$Html$button = _VirtualDom_node('button');
 var $elm$html$Html$div = _VirtualDom_node('div');
 var $elm$html$Html$h1 = _VirtualDom_node('h1');
@@ -5246,18 +5260,31 @@ var $author$project$Main$view = function (model) {
 				$elm$html$Html$button,
 				_List_fromArray(
 					[
+						$elm$html$Html$Events$onClick($author$project$Main$MoveUp)
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Move Up')
+					])),
+				A2(
+				$elm$html$Html$button,
+				_List_fromArray(
+					[
+						$elm$html$Html$Events$onClick($author$project$Main$MoveDown)
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Move Down')
+					])),
+				A2(
+				$elm$html$Html$button,
+				_List_fromArray(
+					[
 						$elm$html$Html$Events$onClick($author$project$Main$MoveLeft)
 					]),
 				_List_fromArray(
 					[
 						$elm$html$Html$text('Move Left')
-					])),
-				A2(
-				$elm$html$Html$div,
-				_List_Nil,
-				_List_fromArray(
-					[
-						$elm$html$Html$text('')
 					])),
 				A2(
 				$elm$html$Html$button,
