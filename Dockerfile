@@ -1,14 +1,3 @@
-# FROM racket/racket:8.5
-
-# COPY . /webapp
-# WORKDIR /webapp/server/racket-server
-
-# EXPOSE 8081
-
-# RUN raco pkg install --auto rfc6455
-
-# CMD ["racket" "main.rkt"]
-
 FROM gcc:latest
 
 COPY . /webapp
@@ -20,7 +9,7 @@ EXPOSE 9000
 
 # RUN gcc -I wsServer/include -std=c99 -pthread -pedantic test.c -o test wsServer/libws.a
 
-CMD ["python3","-m","http.server","&"]
+CMD ["python3","server.py"]
 
 # ENTRYPOINT [ "/bin/bash", "-l", "-c" ]
 # CMD ["./test"]
