@@ -1,6 +1,10 @@
-FROM python:3.8
-RUN pip install websockets
+FROM racket/racket:8.5
+
 COPY . /webapp
-WORKDIR /webapp/server
+WORKDIR /webapp/server/racket-server
+
 EXPOSE 8081
-CMD ["python","main.py"]
+
+RUN raco pkg install --auto rfc6455
+
+CMD ["racket" "main.rkt"]

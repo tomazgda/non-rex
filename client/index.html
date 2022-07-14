@@ -11,54 +11,73 @@
   <style>
     * {
 	text-align: center;
+	font-family: monospace;
+			   
     }
     body {
-	background-color: lightgoldenrodyellow;
+	background-color: #fdf6e3;
+	margin: 0;
     }
     button {
 	font-size: 24px;
 	border: none;
-	background-color: teal;
-	color: white;
+	background-color: #2aa198;
+	color: #586e75;
 	padding: 15px 32px;
 	text-decoration: none;
 	display: inline-block;
 	transition-duration: 0.1s;
 	display: block;
 	width: 100%;
-	border: 1px solid green;
+	border: 1px solid #859900;
     }
     button:hover {
-	background-color: green;
-	color: white;
+	background-color: #859900;
+	color: #586e75;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 	  
     }
 
     button:active {
-	background-color: red;
+	background-color: #cb4b16;
     }
+    
+    .movement {
+	padding: 40px;
+    }
+
+    .motor {
+	padding: 40px;
+    }
+    
   </style>
 
   <!-- the main body -->
   <body>
 
     <h1>T-Rex Controller</h1>
+
+    <div class = "motor">
+      <button onClick="sendCloseJaw()">Close Jaw</button>
+      <button onClick="sendOpenJaw()">Open Jaw</button>
+    </div>
     
-    <button onClick="sendMoveUp()">Move Up</button>
-    <button onClick="sendMoveDown()">Move Down</button>
-    <button onClick="sendMoveLeft()">Move Left</button>
-    <button onClick="sendMoveRight()">Move Right</button>
-    <button onClick="sendCloseJaw()">Close Jaw</button>
-    <button onClick="sendOpenJaw()">Open Jaw</button>
+    <div class = "movement">
+      <button onClick="sendMoveUp()">Move Up</button>
+      <button onClick="sendMoveDown()">Move Down</button>
+      <button onClick="sendMoveLeft()">Move Left</button>
+      <button onClick="sendMoveRight()">Move Right</button>
+    </div>
+    
+  
   </body>
 
   <!-- JavaScript -->
   <script>
-    const socket = new WebSocket('ws://localhost:8081');
+    const socket = new WebSocket('ws://localhost:8081/');
 
     socket.onopen = function(event) {
-	// socket.send("Unity")
+	socket.send("hey server")
 	alert("[open] Connection Established");
     }
 

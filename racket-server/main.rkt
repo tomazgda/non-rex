@@ -5,8 +5,6 @@
 (module+ main
   (require net/rfc6455)
   (define port 8081)
-
-  (define direction "right")
   (define unity-conn null)
   
   (command-line #:once-each
