@@ -14,7 +14,7 @@ FROM gcc:latest
 COPY . /webapp
 WORKDIR /webapp/server
 
-EXPOSE 80
+EXPOSE 8000
 
 RUN git clone https://github.com/Theldus/wsServer; cd wsServer; make
 
