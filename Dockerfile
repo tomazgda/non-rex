@@ -1,8 +1,6 @@
-FROM ubuntu:20.04 as trexcontrol_base
-
-RUN apt-get update; apt-get -y install racket
-RUN raco setup & raco pkg install rfc6455
+FROM python:3.8
+RUN pip install websockets
 COPY . /webapp
-WORKDIR /webapp/racket-server
+WORKDIR /webapp/server
 EXPOSE 8081
-CMD ["racket","main.rkt"]
+CMD ["python","main.py"]

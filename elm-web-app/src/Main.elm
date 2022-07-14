@@ -33,7 +33,7 @@ init flags =
   )
 
 -- UPDATE
-type Msg = MoveLeft | MoveRight | MoveUp | MoveDown | Recv String
+type Msg = MoveLeft | MoveRight | MoveUp | MoveDown | OpenJaw | CloseJaw | Recv String
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
@@ -58,6 +58,16 @@ update msg model =
         , sendMessage "down"
         )
 
+    OpenJaw ->
+        ( { model | draft = "" }
+        , sendMessage "open"
+        )
+
+    CloseJaw ->
+        ( { model | draft = "" }
+        , sendMessage "close"
+        )
+
     Recv message ->
         ( { model | messages = model.messages ++ [message] }
         , Cmd.none
@@ -72,11 +82,16 @@ subscriptions _ =
 view : Model -> Html Msg
 view model =
   div []
-    [ h1 [] [ text "Rex Contoller" ]
-    , button [ onClick MoveUp ] [ text "Move Up" ]
-    , button [ onClick MoveDown ] [ text "Move Down" ]
+    [ h1 [] [ text "Control-o-Rex" ]
+    , button [ onClick MoveUp ] [ text "Up" ]
+    , button [ onClick MoveDown ] [ text "Down" ]
+    , div [] []
     , button [ onClick MoveLeft ] [ text "Move Left" ]
     , button [ onClick MoveRight ] [ text "Move Right" ]
+    , div [] []
+    , button [ onClick OpenJaw ] [ text "Open Jaw" ]
+    , button [ onClick CloseJaw ] [ text "Close Jaw" ]
+        
     ]
 
 

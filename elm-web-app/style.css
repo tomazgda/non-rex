@@ -6,14 +6,26 @@ body {
     background-color: white;
 }
 
+/* button { */
+/*   display: block; */
+/*   width: 100%; */
+/*   border: none; */
+/*   background-color: #04AA6D; */
+/*   padding: 14px 28px; */
+/*   font-size: 16px; */
+/*   cursor: pointer; */
+/*   text-align: center; */
+/* } */
+
 button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  width: 100%;
+    line-height: 100px;
+    height: 100%;
+    text-align: center;
+    width: 40%;
+    cursor: pointer;
+    color: black;
+    background-color: lightcoral;
+    position: relative;
+    font-size: 24px;
+    margin: 10px;
 }
