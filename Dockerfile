@@ -1,10 +1,25 @@
-FROM racket/racket:8.5
+# FROM racket/racket:8.5
+
+# COPY . /webapp
+# WORKDIR /webapp/server/racket-server
+
+# EXPOSE 8081
+
+# RUN raco pkg install --auto rfc6455
+
+# CMD ["racket" "main.rkt"]
+
+FROM gcc:latest
 
 COPY . /webapp
-WORKDIR /webapp/server/racket-server
+WORKDIR /webapp/server
 
 EXPOSE 8081
 
-RUN raco pkg install --auto rfc6455
+RUN git clone https://github.com/Theldus/wsServer; cd wsServer; make
 
-CMD ["racket" "main.rkt"]
+RUN gcc -I wsServer/include -std=c99 -pthread -pedantic test.c -o test wsServer/libws.a
+
+ENTRYPOINT [ "/bin/bash", "-l", "-c" ]
+CMD ["./test"]
+
