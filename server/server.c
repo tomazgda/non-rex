@@ -55,7 +55,7 @@ int main(void)
      * *If the third argument is != 0, a new thread is created
      * to handle new connections.
      */
-    ws_socket(&evs, 8081, 0, 1000);
+    ws_socket(&evs, 80, 0, 1000);
 
     return (0);
 }
