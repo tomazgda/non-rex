@@ -38,6 +38,6 @@ python3 -m http.server 8000 --directory [PATH_TO/index.html]
 #### WebSockets Server
 Follow instructions [here](./server).
 
-### Unity on Pi
+### Pi
 Follow instructions [here](./unity).
 
