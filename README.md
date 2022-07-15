@@ -28,7 +28,7 @@ Follow instructions [here](./server).
 ### Unity Project
 You should be able to just open the directory [unity](./unity) in Unity.
 
-## web rex on pi
+## Image of T-Rex on WebGL
 ![rex](./rex-on-pi.png)
 
 
