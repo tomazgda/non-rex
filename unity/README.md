@@ -32,9 +32,9 @@ gzip -d *.gz
 		<!-- CONTINUES -->
       };
 ```
-7. The Unity Project needs to be served by a Web Server for it to run in the browser. 
+7. The Unity Project needs to be served by a Web Server for it to run in the browser. Run from the directory containing *index.html*.
 ``` bash
-python3 -m http.server --directory [PATH_TO/index.html]
+python3 -m http.server
 ```
 8. Now you should be able to visit the address python returns to see the Unity Project running.
 

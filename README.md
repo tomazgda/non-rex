@@ -31,9 +31,9 @@ Clone this Repo.
 git clone https://github.com/tomazgda/web-trex.git
 ```
 #### Web App
-Install python then:
+Install python then, in the directory containing *index.html*:
 ```bash
-python3 -m http.server 8000 --directory [PATH_TO/index.html]
+python3 -m http.server 8000
 ```
 #### WebSockets Server
 Follow instructions [here](./server).

@@ -7,7 +7,7 @@
 
 From this directory clone the C library [wsServer](https://theldus.github.io/wsServer/).
 ```bash
-git clone https://github.com/Theldus/wsServe
+git clone https://github.com/Theldus/wsServer
 ```
 Make
 ```bash
