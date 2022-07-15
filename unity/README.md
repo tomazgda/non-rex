@@ -37,3 +37,7 @@ gzip -d *.gz
 python3 -m http.server --directory [PATH_TO/index.html]
 ```
 8. Now you should be able to visit the address python returns to see the Unity Project running.
+
+
+## Image of T-Rex on WebGL
+![rex](./rex-on-pi.png)
