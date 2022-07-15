@@ -28,7 +28,7 @@ Follow instructions [here](./server).
 ### Unity Project
 Follow instructions [here](./unity).
 
-## web rex on pi
+## Image of T-Rex on WebGL
 ![rex](./rex-on-pi.png)
 
 
