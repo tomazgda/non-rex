@@ -18,7 +18,7 @@ Receives calls from javascript and does stuff
 ```bash
 unzip [Name of File]
 ```
-4. Change directory to Build in the newly unzipped directory.
+4. Change directory to "Build" in the newly unzipped directory.
 5. Decompress all gzipped files.
 ``` bash
 gzip -d *.gz
