@@ -10,7 +10,7 @@ Provides javascript functions to unity
 [WebSockets.cs](./Assets/Scripts/WebSockets.cs)
 Receives calls from javascript and does stuff
 
-## Getting this on the Pi
+## Getting the Unity Game on the Pi
 
 1. [Not on the PI] From the Unity editor, export to WebGL.
 2. Move the exported project to the PI (Should be zipped).
