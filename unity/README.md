@@ -26,9 +26,9 @@ gzip -d *.gz
 6. Edit index.html, removing the .gz extensions in references to the files just decompressed
 ```html
  var config = {
-        dataUrl: buildUrl + "/web-build.data.gz",
-        frameworkUrl: buildUrl + "/web-build.framework.js.gz",
-        codeUrl: buildUrl + "/web-build.wasm.gz",
+        dataUrl: buildUrl + "/web-build.data.gz", <!-- make this "/web-build.data" -->
+        frameworkUrl: buildUrl + "/web-build.framework.js.gz", <!-- make this "/web-build.framework.js" -->
+        codeUrl: buildUrl + "/web-build.wasm.gz", <!-- make this "/web-build.wasm" -->
 		<!-- CONTINUES -->
       };
 ```
