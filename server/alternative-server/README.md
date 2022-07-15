@@ -1,16 +1,16 @@
 # Racket Web Server
 
-## why? 
+## Why? 
 
 Just in case reproducing (functionally) the C server fails, here is another that should be a drag and drop replacement.
 
-## dependencies
+## Dependencies
 - racket
 - the racket library rfc6455.
 ``` bash
 raco pkg install rfc6455
 ```
-## running
+## Running
 ```bash
 racket main.rkt
 ```
