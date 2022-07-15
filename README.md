@@ -38,7 +38,7 @@ python3 -m http.server 8000 --directory [PATH_TO/index.html]
 #### WebSockets Server
 Follow instructions [here](./server).
 
-### Pi
+### Unity on Pi
 Follow instructions [here](./unity).
 
 ## Image of T-Rex on WebGL
