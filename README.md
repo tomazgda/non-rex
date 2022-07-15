@@ -8,6 +8,10 @@ That means:
 - [The Web Sockets Server](./server) which forwards messages from all clients to unity.
 - [The Unity Project](./unity) with the T-rex.
 
+## What Am I Installing Where?
+
+You are installing the Web App and the WebSockets server to the VM and the Unity Project to the Pi.
+
 ## Reproducing
 
 ### Azure
