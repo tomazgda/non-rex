@@ -41,7 +41,3 @@ Follow instructions [here](./server).
 ### Unity on Pi
 Follow instructions [here](./unity).
 
-## Image of T-Rex on WebGL
-![rex](./rex-on-pi.png)
-
-
