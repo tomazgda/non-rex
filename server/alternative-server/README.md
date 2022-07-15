@@ -2,7 +2,7 @@
 
 ## why? 
 
-Just in case reproducing functionally the C server fails, here is another that should be a drag and drop replacement.
+Just in case reproducing (functionally) the C server fails, here is another that should be a drag and drop replacement.
 
 ## dependencies
 - racket
