@@ -26,7 +26,7 @@ python3 -m http.server 8000 --directory [PATH_TO/index.html]
 Follow instructions [here](./server).
 
 ### Unity Project
-You should be able to just open the directory [unity](./unity) in Unity.
+Follow instructions [here](./unity).
 
 ## web rex on pi
 ![rex](./rex-on-pi.png)
