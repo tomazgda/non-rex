@@ -21,10 +21,4 @@ The web app controls the t-rex with the racket server acting as an intermediary.
 ## web rex on pi
 ![rex](./rex-on-pi.png)
 
-## dependencies
-- elm 
-- racket
-- the racket library rfc6455.
-``` bash
-raco pkg install rfc6455
-```
+
