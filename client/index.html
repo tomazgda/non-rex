@@ -58,6 +58,13 @@
     <h1>T-Rex Controller</h1>
 
     <div class = "motor">
+      <button onClick="sendLeftForward()">Left Forward</button>
+      <button onClick="sendLeftBack()">Left Back</button>
+      <button onClick="sendRighForward()">Right Forward</button>
+      <button onClick="sendRightBack()">Right Back</button>
+    </div>
+
+    <div class = "motor">
       <button onClick="sendCloseJaw()">Close Jaw</button>
       <button onClick="sendOpenJaw()">Open Jaw</button>
     </div>
@@ -74,7 +81,7 @@
 
   <!-- JavaScript -->
   <script>
-    const socket = new WebSocket('ws://localhost:8081/');
+    const socket = new WebSocket('ws://20.26.206.112:8081');
 
     socket.onopen = function(event) {
 	// socket.send("Unity")
@@ -92,6 +99,11 @@
     sendMoveRight = function() {socket.send("right");}
     sendCloseJaw = function() {socket.send("close");}
     sendOpenJaw = function() {socket.send("open");}
+
+    sendLeftForward = function() {socket.send("left-forward");}
+    sendLeftBack = function() {socket.send("left-back");}
+    sendRightForward = function() {socket.send("right-forward");}
+    sendRightBack = function() {socket.send("right-back");}
   </script>
   
 </html>
