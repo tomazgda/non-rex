@@ -49,6 +49,11 @@
     .motor {
 	padding: 40px;
     }
+
+    .pressable {
+	padding: 40px;
+	background-color: red;
+    }
     
   </style>
 
@@ -57,12 +62,13 @@
 
     <h1>T-Rex Controller</h1>
 
-    <div class = "motor">
-      <button onClick="sendLeftForward()">Left Forward</button>
-      <button onClick="sendLeftBack()">Left Back</button>
-      <button onClick="sendRighForward()">Right Forward</button>
-      <button onClick="sendRightBack()">Right Back</button>
-    </div>
+    <!-- <div class = "pressable" onmousedown="mouseDown()" onmouseup="mouseUp()"></div>     -->
+    <!-- <div class = "motor"> -->
+    <!--   <button onClick="sendLeftForward()">Left Forward</button> -->
+    <!--   <button onClick="sendLeftBack()">Left Back</button> -->
+    <!--   <button onClick="sendRighForward()">Right Forward</button> -->
+    <!--   <button onClick="sendRightBack()">Right Back</button> -->
+    <!-- </div> -->
 
     <div class = "motor">
       <button onClick="sendCloseJaw()">Close Jaw</button>
@@ -75,6 +81,12 @@
       <button onClick="sendMoveLeft()">Move Left</button>
       <button onClick="sendMoveRight()">Move Right</button>
     </div>
+
+    <div class = "motor">
+      <button onClick="sendStop()">Stop</button>
+    </div>
+    
+    <!-- <div class = "pressable"></div> -->
     
   
   </body>
@@ -100,10 +112,16 @@
     sendCloseJaw = function() {socket.send("close");}
     sendOpenJaw = function() {socket.send("open");}
 
-    sendLeftForward = function() {socket.send("left-forward");}
-    sendLeftBack = function() {socket.send("left-back");}
-    sendRightForward = function() {socket.send("right-forward");}
-    sendRightBack = function() {socket.send("right-back");}
+    // sendLeftForward = function() {socket.send("left-forward");}
+    // sendLeftBack = function() {socket.send("left-back");}
+    // sendRightForward = function() {socket.send("right-forward");}
+    // sendRightBack = function() {socket.send("right-back");}
+
+    mouseDown = function() {console.log("mouseDown");}
+    mouseUp = function() {console.log("mouseUp");}
+
+    sendStop = function() {socket.send("stop");}
+    
   </script>
   
 </html>
